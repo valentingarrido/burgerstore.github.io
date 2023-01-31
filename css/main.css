@@ -13,17 +13,16 @@
     width: 8rem;
     object-fit: contain;
     border-radius: 6px;
-    margin-right: 20px;
 }
 
 .table__cantidad > input {
-    width: 40px;
+    width: 30px;
     border: none;
     outline: 0;
     font-size: 16px;
     font-weight: 700;
-    margin-right: 30px;
-    margin-bottom: 20px;
+    margin-right: 0px;
+    margin-bottom: 0px;
 }
 
 .hide{
@@ -39,18 +38,14 @@
     transform: scale(1.05);
 }
 
-.card-img-top {
-    transition: transform 1.0s;
-}
-
-.card-img-top:hover{
-    transform: scale(1.05);
-}
-
 .navbar-brand{
     transition: transform 1.0s;
 }
 
 .navbar-brand:hover{
     transform: scale(1.2);
+}
+
+.navbar, .card, .table__product {
+    font-family: Unbounded, cursive;
 }

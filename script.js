@@ -1,7 +1,6 @@
 const Clickbutton = document.querySelectorAll('.button')
 const tbody = document.querySelector('.tbody')
 let sound = new Audio('../audio/audio.mp3')
-let sound2 = new Audio('../audio/audio.mp3')
 let carrito = []
 
 Clickbutton.forEach(btn => {
@@ -68,15 +67,14 @@ function renderCarrito(){
         tr.classList.add('ItemCarrito')
         const Content = `
 
-        <td class="table__product">
-            <img src=${item.img} alt="">
-            <h6 class="title text-center pt-5 fs-4">${item.title}</h6>
+        <td class="table__product" style="height: 50px">
+            <h6 class="title pt-2">${item.title}</h6>
         </td>
-        <td class="table__cantidad">
-            <input type="number" min="1" value=${item.cantidad} class="input__elemento mt-5">
-            <button class="delete btn btn-danger">X</button>
+        <td class="table__cantidad p-0 align-middle" style="height: 50px">
+            <input type="number" min="1" value=${item.cantidad} class="input__elemento align-middle">
+            <button class="delete btn btn-danger border-0 p-1 align-middle">X</button>
         </td>
-        <td class="table__price pt-5 fs-4 text-white">
+        <td class="table__price align-middle text-white">
             ${item.precio}
         </td>
     `
@@ -110,6 +108,7 @@ function removeItemCarrito(e){
 
         if(carrito[i].title.trim() === title.trim()){
         carrito.splice(i, 1)
+        sound.play();
         }
     }
 
