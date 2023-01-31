@@ -1,0 +1,60 @@
+.carrito {
+    min-height: 70vh;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.table__product {
+    display: flex;
+}
+
+.table__product > img {
+    width: 8rem;
+    object-fit: contain;
+    border-radius: 6px;
+    margin-right: 20px;
+}
+
+.table__cantidad > input {
+    width: 40px;
+    border: none;
+    outline: 0;
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+.hide{
+    display: none;
+}
+
+.remove{
+    display: none;
+}
+
+.btn:hover{
+    transition: transform 0.3s;
+    transform: scale(1.05);
+}
+
+.navbar-brand{
+    transition: transform 1.0s;
+}
+
+.navbar-brand:hover{
+    transform: scale(1.2);
+}
+
+.itemCartTotal {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    font-family: 'Unbounded', cursive;
+}
+
+.tab-content, .card, .table {
+    font-family: 'Unbounded', cursive;
+}
