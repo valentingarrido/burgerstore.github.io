@@ -33,3 +33,24 @@
 .remove{
     display: none;
 }
+
+.btn:hover{
+    transition: transform 0.3s;
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    transition: transform 1.0s;
+}
+
+.card-img-top:hover{
+    transform: scale(1.05);
+}
+
+.navbar-brand{
+    transition: transform 1.0s;
+}
+
+.navbar-brand:hover{
+    transform: scale(1.2);
+}
