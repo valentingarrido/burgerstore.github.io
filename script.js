@@ -137,7 +137,6 @@ function sumaCantidad(e){
     })
 }
 
-/* Nueva pestaña */
 const button = document.querySelector('.comprar');
 
 button.addEventListener('click', () => {
@@ -155,38 +154,17 @@ button.addEventListener('click', () => {
 
     if (!isNaN(priceValue) && priceValue) {
       total += priceValue * Number(quantity);
+      message += `${product} x${quantity}: $${Math.round(priceValue * Number(quantity))}\n`;
     }
-
-    message += `${product} x${quantity}: ${price}`;
-    message += '\n';
   }
 
-  message += `\nTotal: $${total}`;
+  message += `\nTotal: $${Math.round(total)}`;
   message = encodeURIComponent(message);
   window.open(`https://wa.me/${phoneNumber}?text=${message}`);
 });
 
 
-
 /* Abrir en misma pestaña */
 /*
-const button = document.querySelector('.comprar');
-
-button.addEventListener('click', () => {
-  const phoneNumber = '1234567890';
-  const rows = document.querySelectorAll('tbody tr');
-  let message = '';
-
-  for (const row of rows) {
-    const product = row.querySelector('.table__product .title').textContent;
-    const quantityInput = row.querySelector('.table__cantidad .input__elemento');
-    const quantity = quantityInput ? quantityInput.value : 0;
-    const price = row.querySelector('.table__price').textContent;
-
-    message += `${product} x ${quantity}: ${price}\n`;
-  }
-
-  message = encodeURIComponent(message);
   window.location.href = `https://wa.me/${phoneNumber}?text=${message}`;
-});
 */
