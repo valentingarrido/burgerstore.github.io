@@ -159,6 +159,8 @@ button.addEventListener('click', () => {
   }
 
   message += `\nTotal: $${Math.round(total)}`;
+  message += `\nDireccion: `
+  message += `\nMuchas Gracias!`
   message = encodeURIComponent(message);
   window.open(`https://wa.me/${phoneNumber}?text=${message}`);
 });
