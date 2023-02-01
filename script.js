@@ -116,7 +116,7 @@ function removeItemCarrito(e){
 
     setTimeout( function(){
         alert.classList.add('remove')
-    }, 500)
+    }, 1000)
         alert.classList.remove('remove')
 
 
@@ -137,21 +137,56 @@ function sumaCantidad(e){
     })
 }
 
+/* Nueva pestaña */
+const button = document.querySelector('.comprar');
+
+button.addEventListener('click', () => {
+  const phoneNumber = '+543489429747';
+  const rows = document.querySelectorAll('tbody tr');
+  let message = 'Hola, mi pedido es el siguiente:\n\n';
+  let total = 0;
+
+  for (const row of rows) {
+    const product = row.querySelector('.table__product .title').textContent;
+    const quantityInput = row.querySelector('.table__cantidad .input__elemento');
+    const quantity = quantityInput ? quantityInput.value : 0;
+    const price = row.querySelector('.table__price').textContent;
+    const priceValue = Number(price.replace(/[^0-9.-]+/g, ''));
+
+    if (!isNaN(priceValue) && priceValue) {
+      total += priceValue * Number(quantity);
+    }
+
+    message += `${product} x${quantity}: ${price}`;
+    message += '\n';
+  }
+
+  message += `\nTotal: $${total}`;
+  message = encodeURIComponent(message);
+  window.open(`https://wa.me/${phoneNumber}?text=${message}`);
+});
 
 
-/* function redirectToWhatsApp(phonenumber, message) {
-    var url = "https://api.whatsapp.com/send?phone=" + phonenumber + "&text=" + message;
-        window.location.href = url;
-}
 
-function Comprar(){
+/* Abrir en misma pestaña */
+/*
+const button = document.querySelector('.comprar');
 
-    const compra = e.target
-    const compra = compra.closest(".comprar")
-    const compra = div.querySelector(".comprar").textContent
-    
-    redirectToWhatsApp("+5493489429747", "Hola, Como estas?")
-} */
+button.addEventListener('click', () => {
+  const phoneNumber = '1234567890';
+  const rows = document.querySelectorAll('tbody tr');
+  let message = '';
 
+  for (const row of rows) {
+    const product = row.querySelector('.table__product .title').textContent;
+    const quantityInput = row.querySelector('.table__cantidad .input__elemento');
+    const quantity = quantityInput ? quantityInput.value : 0;
+    const price = row.querySelector('.table__price').textContent;
 
+    message += `${product} x ${quantity}: ${price}\n`;
+  }
 
+  message = encodeURIComponent(message);
+  window.location.href = `https://wa.me/${phoneNumber}?text=${message}`;
+});
+*/

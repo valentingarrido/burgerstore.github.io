@@ -49,3 +49,23 @@
 .navbar, .card, .table__product {
     font-family: Unbounded, cursive;
 }
+
+h2 {
+    font-family: Unbounded, cursive;
+}
+
+.card img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: all 2s;
+}
+
+.card div{
+    overflow: hidden;
+}
+
+.card:hover img{
+    transform: scale(1.4);
+}
