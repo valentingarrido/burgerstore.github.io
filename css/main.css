@@ -54,6 +54,19 @@ h2 {
     font-family: Unbounded, cursive;
 }
 
+.glow {
+    width: 50px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.glow:hover{
+    -webkit-filter: drop-shadow(0px 0px 2px #ffc107);
+    filter: drop-shadow(0px 0px 2px #ffc107);
+    transition: transform 1s;
+    transform: scale(1.3);
+}
+
 .card-img-top{
     width: 100%;
     height: 300px;
@@ -71,10 +84,27 @@ h2 {
 }
 
 .card:hover {
-    box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.65);
+    box-shadow: 0px 0px 1px 1px #ffc107;
 }
 
 h2:hover {
     transition: transform 1s;
     transform: scale(1.1);
+}
+
+.footer-dark {
+    padding:50px 0;
+    color:#f0f9ff;
+    background-color:#282d32;
+}
+  
+.footer-dark .copyright {
+  text-align:center;
+  padding-top:24px;
+  opacity:0.3;
+  font-size:13px;
+}
+
+.social {
+    text-align:center;
 }
