@@ -61,7 +61,7 @@ h2 {
 }
 
 .glow:hover{
-    -webkit-filter: drop-shadow(0px 0px 2px #ffbb00);
+    -webkit-filter: drop-shadow(0px 0px 2px #ffc107);
     filter: drop-shadow(0px 0px 2px #ffc107);
     /*
     transition: transform 1s;
