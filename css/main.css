@@ -109,3 +109,18 @@ h2:hover {
 .social {
     text-align:center;
 }
+
+.footer-dark {
+    padding-top: 60px;
+    padding-bottom: 1px;
+}
+
+.margincustom {
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+.carritofuente {
+    padding-left: 10px;
+    padding-right: 10px;
+}
