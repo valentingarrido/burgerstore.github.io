@@ -1,0 +1,138 @@
+.carrito {
+    min-height: 70vh;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.table__product {
+    display: flex;
+}
+
+.table__product > img {
+    width: 8rem;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.table__cantidad > input {
+    width: 30px;
+    border: none;
+    outline: 0;
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+
+.hide{
+    display: none;
+}
+
+.remove{
+    display: none;
+}
+
+.btn:hover{
+    transition: transform 0.3s;
+    transform: scale(1.05);
+}
+
+.navbar-brand{
+    transition: transform 1.0s;
+}
+
+.navbar-brand:hover{
+    transform: scale(1.2);
+}
+
+.navbar, .card, .table__product {
+    font-family: Unbounded, cursive;
+}
+
+h2 {
+    font-family: Unbounded, cursive;
+}
+
+.glow {
+    width: 50px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.glow:hover{
+    -webkit-filter: drop-shadow(0px 0px 2px #b91135);
+    filter: drop-shadow(0px 0px 2px #b91135);
+    /*
+    transition: transform 1s;
+    transform: scale(1.3);
+    */
+}
+
+.card-img-top{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: transform 2s;
+}
+
+.card div{
+    overflow: hidden;
+}
+
+.card-img-top:hover {
+    transform: scale(2.2);
+}
+
+.card:hover {
+    box-shadow: 0px 0px 1px 1px #b91135;
+}
+
+h2:hover {
+    transition: transform 1s;
+    transform: scale(1.1);
+}
+
+.footer-dark {
+    padding: 50px 0;
+    color:#f0f9ff;
+}
+  
+.footer-dark .copyright {
+  text-align:center;
+  padding-top:24px;
+  opacity:0.3;
+  font-size:13px;
+}
+
+.social {
+    text-align:center;
+}
+
+.footer-dark {
+    padding-top: 60px;
+    padding-bottom: 1px;
+}
+
+.margincustom {
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+.carritofuente {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@media (min-width: 320px) {
+    .invisible {
+      position: absolute;
+    }
+}
+
+@media (min-width: 992px) {
+    .invisible {
+      position: relative;
+    }
+}
