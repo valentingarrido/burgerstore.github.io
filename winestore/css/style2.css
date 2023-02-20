@@ -1,0 +1,261 @@
+.nav-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    -webkit-filter: drop-shadow(0px 0px 5px #000000);
+    filter: drop-shadow(0px 0px 5px #000000);
+}
+
+.scale img:hover {
+    transition: all 0.5s;
+    transform: scale(1.1);
+    -webkit-filter: drop-shadow(0px 0px 10px #000000);
+    filter: drop-shadow(0px 0px 10px #000000);
+}
+
+.logo {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    scale: 1.5;
+}
+
+li {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+@media (min-width: 576px) {
+    li {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+.fixed-height {
+    max-height: calc(100vh - 0px); /* ajusta la altura para que el menú sea un poco más corto que la pantalla */
+    overflow-y: auto; /* agrega scroll vertical cuando el contenido excede la altura máxima */
+}
+
+::-webkit-scrollbar {
+    position: absolute;
+    width: 0px; /* Ancho de la barra de desplazamiento */
+    background-color: transparent; /* Color de fondo de la barra de desplazamiento */
+}
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Color del indicador de la barra de desplazamiento */
+}
+
+.card {width: 15rem;}
+
+@media (min-width: 420px) {
+    .card {
+        width: 16rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .card {
+        width: 14rem;
+    }
+}
+
+@media (min-width: 1800px) {
+    .card {
+        width: 18rem;
+    }
+}
+
+.col-2 {
+    background-color: #9d5410;
+}
+
+.col-lg-11 {
+    background-image: url('../images/background1.png');
+    background-size: contain;
+}
+
+@media (min-width: 1400px) {
+    .col-lg-11 {
+        background-image: url('../images/background3.png');
+        background-size: contain;
+    }
+}
+
+@media (min-width: 1800px) {
+    .col-lg-11 {
+        background-image: url('../images/background3.png');
+        background-size: contain;
+    }
+}
+
+.bg-blur {
+    background-color: #ffffff;
+}
+
+.whatsapp-float{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 10px;
+    right: 10px;
+    background-color: #1bd741;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 30px;
+    z-index: 100;
+    transition: all 1s;
+}
+
+.carrito-float{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 70px;
+    right: 10px;
+    background-color: #00000083;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 30px;
+    z-index: 100;
+    transition: all 1s;
+}
+
+.carrito-float:hover {
+    transform: scale(1.1);
+    -webkit-filter: drop-shadow(0px 0px 5px #000000);
+    filter: drop-shadow(0px 0px 5px #000000);
+}
+  
+.my-float{
+    margin-top: 16px;
+}
+  
+.whatsapp-icon {
+    background-image: url('../images/whatsapp.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+  
+.carrito-icon {
+    background-image: url('../images/carrito.jfif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media (min-width: 976px) {
+    .whatsapp-float{
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+@media (min-width: 976px) {
+    .carrito-float{
+        bottom: 75px;
+        right: 15px;
+    }
+}
+
+details summary::-webkit-details-marker {
+    display: none;
+}
+
+details summary {
+    list-style: none;
+}
+/*
+summary.second-summary {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+summary.second-summary::-webkit-details-marker {
+  display: none;
+} */
+
+.hide{
+    display: none;
+}
+
+.remove{
+    display: none;
+}
+
+table {
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.alert {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 9999;
+}
+
+div .modal-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    padding-bottom: 10px;
+    color:black;
+    background-color: #9d5410;
+}
+  
+footer .copyright {
+  text-align:center;
+  padding-top:24px;
+  opacity:0.7;
+  font-size:13px;
+}
+
+.social {
+    text-align:center;
+}
+
+.glow {
+    margin-top: 20px;
+    width: 50px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.glow:hover{
+    -webkit-filter: drop-shadow(0px 0px 2px #b91135);
+    filter: drop-shadow(0px 0px 2px #b91135);
+    /*
+    transition: transform 1s;
+    transform: scale(1.3);
+    */
+}
+
+.card {
+    margin: auto;
+    margin-top: 31px;
+    margin-bottom: 32px;
+}
+
+@media (min-width: 996px) {
+    .card {
+        margin: auto;
+        margin-top: 75px;
+    }
+}
+
+.espaciado {
+    padding-bottom: 31px;
+}
+
+@media (min-width: 996px) {
+    .espaciado {
+        padding-bottom: 75px;
+    }
+}
