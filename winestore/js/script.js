@@ -13,10 +13,12 @@ function addToCarritoItem(e){
     const button = e.target
     const item = button.closest('.card-body')
     const itemTitle = item.querySelector('.card-title').textContent;
+    const itemTitle2 = item.querySelector('.card-title2').textContent;
     const itemPrice = item.querySelector('.precio').textContent;
 
     const NewItem = {
         title: itemTitle,
+        title2: itemTitle2,
         precio: itemPrice,
         cantidad: 1
     }
@@ -25,34 +27,33 @@ function addToCarritoItem(e){
 }
 
 function addItemCarrito(NewItem){
-
     const alert = document.querySelector('.alert')
 
-    setTimeout( function(){
+    setTimeout(function(){
         alert.classList.add('hide')
     }, 1000)
-        alert.classList.remove('hide')
+
+    alert.classList.remove('hide')
 
     const InputElemento = tbody.getElementsByClassName('input__elemento')
-    for(let i =0; i < carrito.length ; i++){
-        if(carrito[i].title.trim() === NewItem.title.trim()){
-            carrito[i].cantidad ++;
+
+    for (let i = 0; i < carrito.length; i++) {
+        if ((carrito[i].title.trim() === NewItem.title.trim()) && (carrito[i].title2.trim() === NewItem.title2.trim())) {
+            carrito[i].cantidad++;
             
             const inputValue = InputElemento[i].value
             inputValue.value++;
             renderCarrito()
             CarritoTotal()
             return null;
-            }
         }
+    }
 
-        carrito.push(NewItem)
+    carrito.push(NewItem)
 
-        renderCarrito()
-        
-
-
+    renderCarrito()
 }
+
 
 
 
@@ -64,7 +65,7 @@ function renderCarrito(){
         const Content = `
 
         <td class="table__product">
-            <h6 class="title pt-2">${item.title}</h6>
+            <h6 class="title pt-2">${item.title} | ${item.title2}</h6>
         </td>
         <td class="table__cantidad p-0 align-middle" style="max-width: 80px";>
             <input type="number" min="1" value=${item.cantidad} class="input__elemento" style="max-width: 40px">
@@ -100,6 +101,7 @@ function removeItemCarrito(e){
     const buttonDelete = e.target
     const tr = buttonDelete.closest(".ItemCarrito")
     const title = tr.querySelector('.title').textContent;
+    const title2 = tr.querySelector('.title').textContent;
     for(let i=0; i<carrito.length ; i++){
 
         if(carrito[i].title.trim() === title.trim()){
@@ -123,8 +125,9 @@ function sumaCantidad(e){
     const sumaInput = e.target
     const tr = sumaInput.closest(".ItemCarrito")
     const title = tr.querySelector('.title').textContent;
+    const title2 = tr.querySelector('.title').textContent;
     carrito.forEach(item => {
-        if(item.title.trim() === title){
+        if(item.title.trim() && (item.title2.trim()) === title){
             sumaInput.value < 1 ? (sumaInput.value = 1) : sumaInput.value;
             item.cantidad = sumaInput.value
             CarritoTotal()
