@@ -1,0 +1,624 @@
+<!--
+  *Agregar fotos de los vinos
+  *Agregar accordion para precio x caja
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <title>Pablo Huerta Wines</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2 col-lg-1 p-0 p-lg-2 sticky-top fixed-height">
+                <ul class="nav nav-pills flex-column" id="myTab" role="tablist">
+                  <li class="nav-item logo">
+                    <img src="images/logos/logopablohuerta2.png" alt="Pablo Huerta Wines">
+                  </li>
+                  <li class="nav-item scale" role="presentation">
+                      <img src="images/logos/niven.jpg" alt="Niven Wines" class="nav-link active p-2 p-md-3 p-lg-2 px-xl-3" id="niven-tab" data-bs-toggle="tab" data-bs-target="#niven-tab-pane" type="a" role="tab" aria-controls="niven-tab-pane" aria-selected="true">
+                  </li>
+                  <li class="nav-item scale" role="presentation">
+                      <img src="images/logos/vinyes.png" alt="Vinyes Ocults" class="nav-link p-2 p-md-3 p-lg-2 px-xl-3" id="vinyes-tab" data-bs-toggle="tab" data-bs-target="#vinyes-tab-pane" type="a" role="tab" aria-controls="vinyes-tab-pane" aria-selected="false">
+                  </li>
+                  <li class="nav-item scale" role="presentation">
+                      <img src="images/logos/anaia.png" alt="Anaia Wines" class="nav-link p-2 p-md-3 p-lg-2 px-xl-3" id="anaia-tab" data-bs-toggle="tab" data-bs-target="#anaia-tab-pane" type="a" role="tab" aria-controls="anaia-tab-pane" aria-selected="false">
+                  </li>
+                  <li class="nav-item scale" role="presentation">
+                      <img src="images/logos/zanchetta.png" alt="Familia Zanchetta" class="nav-link p-2 p-md-3 p-lg-2 px-xl-3" id="zanchetta-tab" data-bs-toggle="tab" data-bs-target="#zanchetta-tab-pane" type="a" role="tab" aria-controls="zanchetta-tab-pane" aria-selected="false">
+                  </li>
+                  <li class="nav-item scale" role="presentation">
+                      <img src="images/logos/satrapa.png" alt="Satrapa Wines" class="nav-link p-2 p-md-3 p-lg-2 px-xl-3" id="satrapa-tab" data-bs-toggle="tab" data-bs-target="#satrapa-tab-pane" type="a" role="tab" aria-controls="satrapa-tab-pane" aria-selected="false">
+                  </li>
+                  <li class="nav-item scale" role="presentation">
+                      <img src="images/logos/martino.png" alt="Martino Wines" class="nav-link p-2 p-md-3 p-lg-2 px-xl-3" id="martino-tab" data-bs-toggle="tab" data-bs-target="#martino-tab-pane" type="a" role="tab" aria-controls="martino-tab-pane" aria-selected="false">
+                  </li>
+                  <li class="nav-item scale" role="presentation">
+                      <img src="images/logos/closdechacras.png" alt="Clos de Chacras Wines" class="nav-link p-2 p-md-3 p-lg-2 px-xl-3" id="closdechacras-tab" data-bs-toggle="tab" data-bs-target="#closdechacras-tab-pane" type="a" role="tab" aria-controls="closdechacras-tab-pane" aria-selected="false">
+                  </li>
+                  <li class="nav-item scale" role="presentation">
+                      <img src="images/logos/bressia.png" alt="Bressia Casa de Vinos" class="nav-link p-2 p-md-3 p-lg-2 px-xl-3" id="bressia-tab" data-bs-toggle="tab" data-bs-target="#bressia-tab-pane" type="a" role="tab" aria-controls="bressia-tab-pane" aria-selected="false">
+                  </li>
+                  <li class="nav-item scale" role="presentation">
+                      <img src="images/logos/altaruco.png" alt="Altar Uco Vinos de Quietud" class="nav-link p-2 p-md-3 p-lg-2 px-xl-3" id="altaruco-tab" data-bs-toggle="tab" data-bs-target="#altaruco-tab-pane" type="a" role="tab" aria-controls="altaruco-tab-pane" aria-selected="false">
+                  </li>
+                  <li class="nav-item scale" role="presentation">
+                      <img src="images/logos/zorzal.png" alt="Zorzal Vineyards Winery" class="nav-link p-2 p-md-3 p-lg-2 px-xl-3" id="zorzal-tab" data-bs-toggle="tab" data-bs-target="#zorzal-tab-pane" type="a" role="tab" aria-controls="zorzal-tab-pane" aria-selected="false">
+                  </li>
+                  <li class="nav-item scale" role="presentation">
+                      <img src="images/logos/achavalferrer.png" alt="Achaval Ferrer Bodega" class="nav-link p-2 p-md-3 p-lg-2 px-xl-3" id="achavalferrer-tab" data-bs-toggle="tab" data-bs-target="#achavalferrer-tab-pane" type="a" role="tab" aria-controls="achavalferrer-tab-pane" aria-selected="false">
+                  </li>
+                  <li class="nav-item scale" role="presentation">
+                      <img src="images/logos/teho.png" alt="Bodega Teho" class="nav-link p-2 p-md-3 p-lg-2 px-xl-3" id="teho-tab" data-bs-toggle="tab" data-bs-target="#teho-tab-pane" type="a" role="tab" aria-controls="teho-tab-pane" aria-selected="false">
+                  </li>
+                  <li class="nav-item scale" role="presentation">
+                      <img src="images/logos/losance.png" alt="Losance Wines" class="nav-link p-2 p-md-3 p-lg-2 px-xl-3" id="losance-tab" data-bs-toggle="tab" data-bs-target="#losance-tab-pane" type="a" role="tab" aria-controls="losance-tab-pane" aria-selected="false">
+                  </li>
+                  <li class="nav-item scale" role="presentation">
+                      <img src="images/logos/flechasdelosandes.png" alt="Flechas de los Andes" class="nav-link p-2 p-md-3 p-lg-2 px-xl-3" id="flechasdelosandes-tab" data-bs-toggle="tab" data-bs-target="#flechasdelosandes-tab-pane" type="a" role="tab" aria-controls="flechasdelosandes-tab-pane" aria-selected="false">
+                  </li>
+                  <li class="nav-item scale" role="presentation">
+                      <img src="images/logos/lamaisonpenet.png" alt="La Maison Penet" class="nav-link p-2 p-md-3 p-lg-2 px-xl-3" id="lamaisonpenet-tab" data-bs-toggle="tab" data-bs-target="#lamaisonpenet-tab-pane" type="a" role="tab" aria-controls="lamaisonpenet-tab-pane" aria-selected="false">
+                  </li>
+                  <li class="nav-item scale" role="presentation">
+                      <img src="images/logos/solocontigo.png" alt="Solo Contigo Wines" class="nav-link p-2 p-md-3 p-lg-2 px-xl-3" id="solocontigo-tab" data-bs-toggle="tab" data-bs-target="#solocontigo-tab-pane" type="a" role="tab" aria-controls="solocontigo-tab-pane" aria-selected="false">
+                  </li>
+                  <li class="nav-item scale" role="presentation">
+                      <img src="images/logos/edelmira.png" alt="Bodega Edelmira" class="nav-link p-2 p-md-3 p-lg-2 px-xl-3" id="edelmira-tab" data-bs-toggle="tab" data-bs-target="#edelmira-tab-pane" type="a" role="tab" aria-controls="edelmira-tab-pane" aria-selected="false">
+                  </li>
+                  <li class="nav-item scale" role="presentation">
+                      <img src="images/logos/gendelalma.png" alt="Gen Del Alma Wines" class="nav-link p-2 p-md-3 p-lg-2 px-xl-3" id="gendelalma-tab" data-bs-toggle="tab" data-bs-target="#gendelalma-tab-pane" type="a" role="tab" aria-controls="gendelalma-tab-pane" aria-selected="false">
+                  </li>
+                  <li class="nav-item scale" role="presentation">
+                      <img src="images/logos/bataraz.png" alt="Bataraz Wines" class="nav-link p-2 p-md-3 p-lg-2 px-xl-3" id="bataraz-tab" data-bs-toggle="tab" data-bs-target="#bataraz-tab-pane" type="a" role="tab" aria-controls="bataraz-tab-pane" aria-selected="false">
+                  </li>
+                  <li class="nav-item scale" role="presentation">
+                      <img src="images/logos/birbiri.png" alt="Biri Biri Wines" class="nav-link p-2 p-md-3 p-lg-2 px-xl-3" id="birbiri-tab" data-bs-toggle="tab" data-bs-target="#birbiri-tab-pane" type="a" role="tab" aria-controls="birbiri-tab-pane" aria-selected="false">
+                  </li>
+                  <li class="nav-item scale" role="presentation">
+                      <img src="images/logos/abismla.png" alt="ABISMAL" class="nav-link p-2 p-md-3 p-lg-2 px-xl-3" id="abismla-tab" data-bs-toggle="tab" data-bs-target="#abismla-tab-pane" type="a" role="tab" aria-controls="abismla-tab-pane" aria-selected="false">
+                  </li>
+                  <li class="nav-item scale" role="presentation">
+                      <img src="images/logos/garavaglia.png" alt="Garavaglia Wines" class="nav-link p-2 p-md-3 p-lg-2 px-xl-3" id="garavaglia-tab" data-bs-toggle="tab" data-bs-target="#garavaglia-tab-pane" type="a" role="tab" aria-controls="garavaglia-tab-pane" aria-selected="false">
+                  </li>
+                  <li class="nav-item scale" role="presentation">
+                      <img src="images/logos/dgentile.png" alt="Cava D'Gentile" class="nav-link p-2 p-md-3 p-lg-2 px-xl-3" id="dgentile-tab" data-bs-toggle="tab" data-bs-target="#dgentile-tab-pane" type="a" role="tab" aria-controls="dgentile-tab-pane" aria-selected="false">
+                  </li>
+                  <li class="nav-item scale" role="presentation">
+                      <img src="images/logos/aguaquecanta.png" alt="Aguaquecanta Wines" class="nav-link p-2 p-md-3 p-lg-2 px-xl-3" id="aguaquecanta-tab" data-bs-toggle="tab" data-bs-target="#aguaquecanta-tab-pane" type="a" role="tab" aria-controls="aguaquecanta-tab-pane" aria-selected="false">
+                  </li>
+                  <li class="nav-item scale" role="presentation">
+                    <img src="images/logos/abismla.png" alt="" class="nav-link p-2 p-md-3 p-lg-2 px-xl-3 opacity-0" style="width: 25%;">
+                </li>
+                </ul>
+            </div>
+            <div class="alert container alert-success hide" role="alert" style="max-width: 250px">
+              Producto Agregado al carrito
+            </div>
+            <div class="alert container alert-danger remove" role="alert" style="max-width: 250px">
+              Producto Eliminado del carrito
+            </div>
+            <div class="col-10 col-lg-11">
+                <div class="tab-content espaciado" id="myTabContent">
+                    <div class="tab-pane fade show active" id="niven-tab-pane" role="tabpanel" aria-labelledby="niven-tab" tabindex="0">
+                        <div class="row row-cols-xl-5 row-cols-lg-3 row-cols-md-2 row-cols-sm-2">
+                          <div class="col">
+                            <div class="card bg-blur">
+                              <div class="rounded">
+                                <img src="images/vinos/nivenwines/criollaargentinatinta.png" class="card-img-top rounded" alt="" data-bs-toggle="modal" data-bs-target="#Vino1">
+                                <div class="modal fade" id="Vino1" tabindex="-1" aria-hidden="true">
+                                  <div class="modal-dialog modal-md">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body p-0">
+                                        <img src="images/vinos/nivenwines/criollaargentinatinta.png" alt="" class="modal-img">
+                                      </div>
+                                      <div class="modal-footer">
+                                        <h2 class="fs-2">Criolla Argentina | Criolla Tinta</h2>
+                                        <p class="fs-5">
+                                          <g>Subregión:</g> Junín<br>
+                                          <g>Descripción:</g> 100% CONCRETO (CRIOLLA GRANDE Y OTRAS CRIOLLAS TINTAS)<br>
+                                          <g>Vendemia:</g> 2021<br>
+                                          <g>Enólogo:</g> Lucas Niven
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card-body">
+                                <h5 class="card-title fs-4">Criolla Argentina</h5>
+                                <h5 class="card-title2 fs-4">Criolla Tinta</h5>
+                                <h5><span class="precio">$850</span></h5>
+                                <a class="btn btn-warning button d-grid gap-2">Agregar al carrito</a>
+                              </div>
+                              </div>
+                          </div>
+                          <div class="col">
+                            <div class="card bg-blur">
+                              <div class="rounded">
+                                <img src="images/vinos/nivenwines/criollaargentinablanca.png" class="card-img-top rounded" alt="" data-bs-toggle="modal" data-bs-target="#Vino2">
+                                <div class="modal fade" id="Vino2" tabindex="-1" aria-hidden="true">
+                                  <div class="modal-dialog modal-md">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body p-0">
+                                        <img src="images/vinos/nivenwines/criollaargentinablanca.png" alt="" class="modal-img">
+                                      </div>
+                                      <div class="modal-footer">
+                                        <h3 class="fs-2">Criolla Argentina | Criolla Blanca</h3>
+                                        <p class="fs-5">
+                                          <g>Subregión:</g> Junín<br>
+                                          <g>Descripción:</g> 100% CONCRETO (TORRONTES, MALVASIA, PEDRO GIMENEZ)<br>
+                                          <g>Vendemia:</g> 2022<br>
+                                          <g>Enólogo:</g> Lucas Niven
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card-body">
+                                <h5 class="card-title fs-4">Criolla Argentina</h5>
+                                <h5 class="card-title2 fs-4">Criolla Blanca</h5>
+                                <h5><span class="precio">$850</span></h5>
+                                <a class="btn btn-warning button d-grid gap-2">Agregar al carrito</a>
+                              </div>
+                              </div>
+                          </div>
+                          <div class="col">
+                            <div class="card bg-blur">
+                              <div class="rounded">
+                                <img src="images/vinos/nivenwines/criollaargentinarosada.png" class="card-img-top rounded" alt="" data-bs-toggle="modal" data-bs-target="#Vino3">
+                                <div class="modal fade" id="Vino3" tabindex="-1" aria-hidden="true">
+                                  <div class="modal-dialog modal-md">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body p-0">
+                                        <img src="images/vinos/nivenwines/criollaargentinarosada.png" alt="" class="modal-img">
+                                      </div>
+                                      <div class="modal-footer">
+                                        <h2 class="fs-2">Criolla Argentina | Criolla Rosada</h2>
+                                        <p class="fs-5">
+                                          <g>Subregión:</g> Junín<br>
+                                          <g>Descripción:</g> 100% CONCRETO (MOSCATEL Y CEREZA  )<br>
+                                          <g>Vendemia:</g> 2022<br>
+                                          <g>Enólogo:</g> Lucas Niven
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card-body">
+                                <h5 class="card-title fs-4">Criolla Argentina</h5>
+                                <h5 class="card-title2 fs-4">Criolla Rosada</h5>
+                                <h5><span class="precio">$850</span></h5>
+                                <a class="btn btn-warning button d-grid gap-2">Agregar al carrito</a>
+                              </div>
+                              </div>
+                          </div>
+                          <div class="col">
+                            <div class="card bg-blur">
+                              <div class="rounded">
+                                <img src="images/vinos/nivenwines/criollaargentinamoscatel.png" class="card-img-top rounded" alt="" data-bs-toggle="modal" data-bs-target="#Vino4">
+                                <div class="modal fade" id="Vino4" tabindex="-1" aria-hidden="true">
+                                  <div class="modal-dialog modal-md">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body p-0">
+                                        <img src="images/vinos/nivenwines/criollaargentinamoscatel.png" alt="" class="modal-img">
+                                      </div>
+                                      <div class="modal-footer">
+                                        <h2 class="fs-2">Criolla Argentina | Moscatel</h2>
+                                        <p class="fs-5">
+                                          <g>Subregión:</g> Junín<br>
+                                          <g>Descripción:</g> MACERACIÓN CON PIELES, CRIANZA EN CONCRETO <br>
+                                          <g>Vendemia:</g> 2022<br>
+                                          <g>Enólogo:</g> Lucas Niven
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card-body">
+                                <h5 class="card-title fs-4">Criolla Argentina</h5>
+                                <h5 class="card-title2 fs-4">Moscatel</h5>
+                                <h5><span class="precio">$900</span></h5>
+                                <a class="btn btn-warning button d-grid gap-2">Agregar al carrito</a>
+                              </div>
+                              </div>
+                          </div>
+                          <div class="col">
+                            <div class="card bg-blur">
+                              <div class="rounded">
+                                <img src="images/vinos/nivenwines/criollaargentinatorrontesnaranjo.png" class="card-img-top rounded" alt="" data-bs-toggle="modal" data-bs-target="#Vino5">
+                                <div class="modal fade" id="Vino5" tabindex="-1" aria-hidden="true">
+                                  <div class="modal-dialog modal-md">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body p-0">
+                                        <img src="images/vinos/nivenwines/criollaargentinatorrontesnaranjo.png" alt="" class="modal-img">
+                                      </div>
+                                      <div class="modal-footer">
+                                        <h2 class="fs-2">Criolla Argentina | Torrontes Naranjo</h2>
+                                        <p class="fs-5">
+                                          <g>Subregión:</g> GUALTALLARY<br>
+                                          <g>Descripción:</g> MACERACIÓN CON PIELES, CRIANZA EN CONCRETO <br>
+                                          <g>Vendemia:</g> 2022<br>
+                                          <g>Enólogo:</g> Lucas Niven
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card-body">
+                                <h5 class="card-title fs-4">Criolla Argentina</h5>
+                                <h5 class="card-title2 fs-4">Torrontes Naranjo</h5>
+                                <h5><span class="precio">$900</span></h5>
+                                <a class="btn btn-warning button d-grid gap-2">Agregar al carrito</a>
+                              </div>
+                              </div>
+                          </div>
+                          <div class="col">
+                            <div class="card bg-blur">
+                              <div class="rounded">
+                                <img src="images/vinos/nivenwines/criollaargentitnapetnatblanco.png" class="card-img-top rounded" alt="" data-bs-toggle="modal" data-bs-target="#Vino6">
+                                <div class="modal fade" id="Vino6" tabindex="-1" aria-hidden="true">
+                                  <div class="modal-dialog modal-md">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body p-0">
+                                        <img src="images/vinos/nivenwines/criollaargentitnapetnatblanco.png" alt="" class="modal-img">
+                                      </div>
+                                      <div class="modal-footer">
+                                        <h2 class="fs-2">Criolla Argentina | Pet Nat Blanco</h2>
+                                        <p class="fs-5">
+                                          <g>Subregión:</g> Junín<br>
+                                          <g>Descripción:</g> BLEND DE CRIOLLAS BLANCAS PET NAT (EFERVECENTE)<br>
+                                          <g>Vendemia:</g> 2022<br>
+                                          <g>Enólogo:</g> Lucas Niven
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card-body">
+                                <h5 class="card-title fs-4">Criolla Argentina</h5>
+                                <h5 class="card-title2 fs-4">Pet Nat Blanco</h5>
+                                <h5><span class="precio">$1500</span></h5>
+                                <a class="btn btn-warning button d-grid gap-2">Agregar al carrito</a>
+                              </div>
+                              </div>
+                          </div>
+                          <div class="col">
+                            <div class="card bg-blur">
+                              <div class="rounded">
+                                <img src="images/vinos/nivenwines/criollaargentinacanela.png" class="card-img-top rounded" alt="" data-bs-toggle="modal" data-bs-target="#Vino7">
+                                <div class="modal fade" id="Vino7" tabindex="-1" aria-hidden="true">
+                                  <div class="modal-dialog modal-md">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body p-0">
+                                        <img src="images/vinos/nivenwines/criollaargentinacanela.png" alt="" class="modal-img">
+                                      </div>
+                                      <div class="modal-footer">
+                                        <h2 class="fs-2">Criolla Argentina | Canela</h2>
+                                        <p class="fs-5">
+                                          <g>Subregión:</g> Junín<br>
+                                          <g>Descripción:</g> VIÑAS CENTENRAIAS, RESERVA 100% BARRICA <br>
+                                          <g>Vendemia:</g> 2022<br>
+                                          <g>Enólogo:</g> Lucas Niven
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card-body">
+                                <h5 class="card-title fs-4">Criolla Argentina</h5>
+                                <h5 class="card-title2 fs-4">Canela</h5>
+                                <h5><span class="precio">$1500</span></h5>
+                                <a class="btn btn-warning button d-grid gap-2">Agregar al carrito</a>
+                              </div>
+                              </div>
+                          </div>
+                          <div class="col">
+                            <div class="card bg-blur">
+                              <div class="rounded">
+                                <img src="images/vinos/nivenwines/criollaargentinatinta.png" class="card-img-top rounded" alt="" data-bs-toggle="modal" data-bs-target="#Vino8">
+                                <div class="modal fade" id="Vino8" tabindex="-1" aria-hidden="true">
+                                  <div class="modal-dialog modal-md">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body p-0">
+                                        <img src="images/vinos/nivenwines/criollaargentinatinta.png" alt="" class="modal-img">
+                                      </div>
+                                      <div class="modal-footer">
+                                        <h2 class="fs-2">Criolla Argentina | Italiana Tinta</h2>
+                                        <p class="fs-5">
+                                          <g>Subregión:</g> Junín<br>
+                                          <g>Descripción:</g> PARRALES CENTENARIOS, RESERVA 100% BARRICA<br>
+                                          <g>Vendemia:</g> 2020<br>
+                                          <g>Enólogo:</g> Lucas Niven
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card-body">
+                                <h5 class="card-title fs-4">Criolla Argentina</h5>
+                                <h5 class="card-title2 fs-4">Italiana Tinta</h5>
+                                <h5><span class="precio">$1500</span></h5>
+                                <a class="btn btn-warning button d-grid gap-2">Agregar al carrito</a>
+                              </div>
+                              </div>
+                          </div>
+                          <div class="col">
+                            <div class="card bg-blur">
+                              <div class="rounded">
+                                <img src="images/vinos/nivenwines/criollaargentinahumahuaca.png" class="card-img-top rounded" alt="" data-bs-toggle="modal" data-bs-target="#Vino9">
+                                <div class="modal fade" id="Vino9" tabindex="-1" aria-hidden="true">
+                                  <div class="modal-dialog modal-md">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body p-0">
+                                        <img src="images/vinos/nivenwines/criollaargentinahumahuaca.png" alt="" class="modal-img">
+                                      </div>
+                                      <div class="modal-footer">
+                                        <h2 class="fs-2">Criolla Argentina | Humahuaca</h2>
+                                        <p class="fs-5">
+                                          <g>Subregión:</g> HUMAHUACA<br>
+                                          <g>Descripción:</g> PERGOLAS CENTENARIAS DE HUMAHUACA (mezcla de uvas criollas)<br>
+                                          <g>Vendemia:</g> 2022<br>
+                                          <g>Enólogo:</g> Lucas Niven
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card-body">
+                                <h5 class="card-title fs-4">Criolla Argentina</h5>
+                                <h5 class="card-title2 fs-4">Humahuaca</h5>
+                                <h5><span class="precio">$1500</span></h5>
+                                <a class="btn btn-warning button d-grid gap-2">Agregar al carrito</a>
+                              </div>
+                              </div>
+                          </div>
+                          <div class="col">
+                            <div class="card bg-blur">
+                              <div class="rounded">
+                                <img src="images/vinos/nivenwines/aquiestamostodoslocosblenddetintas.png" class="card-img-top rounded" alt="" data-bs-toggle="modal" data-bs-target="#Vino10">
+                                <div class="modal fade" id="Vino10" tabindex="-1" aria-hidden="true">
+                                  <div class="modal-dialog modal-md">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body p-0">
+                                        <img src="images/vinos/nivenwines/aquiestamostodoslocosblenddetintas.png" alt="" class="modal-img">
+                                      </div>
+                                      <div class="modal-footer">
+                                        <h2 class="fs-2">Aqui estamos todos locos | Blend de tintas</h2>
+                                        <p class="fs-5">
+                                          <g>Subregión:</g> Junín<br>
+                                          <g>Descripción:</g> TEMPRANILLO - ANCELLOTTA, BLEND DE VIÑEDO<br>
+                                          <g>Vendemia:</g> 2021<br>
+                                          <g>Enólogo:</g> Lucas Niven
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card-body">
+                                <h5 class="card-title fs-4">Aqui estamos todos locos</h5>
+                                <h5 class="card-title2 fs-4">Blend de tintas</h5>
+                                <h5><span class="precio">$1500</span></h5>
+                                <a class="btn btn-warning button d-grid gap-2">Agregar al carrito</a>
+                              </div>
+                              </div>
+                          </div>
+                          <div class="col">
+                            <div class="card bg-blur">
+                              <div class="rounded">
+                                <img src="images/vinos/nivenwines/aquiestamostodoslocosgarnacharosada.png" class="card-img-top rounded" alt="" data-bs-toggle="modal" data-bs-target="#Vino11">
+                                <div class="modal fade" id="Vino11" tabindex="-1" aria-hidden="true">
+                                  <div class="modal-dialog modal-md">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body p-0">
+                                        <img src="images/vinos/nivenwines/aquiestamostodoslocosgarnacharosada.png" alt="" class="modal-img">
+                                      </div>
+                                      <div class="modal-footer">
+                                        <h2 class="fs-2">Aqui estamos todos locos | Garnacha Rosada</h2>
+                                        <p class="fs-5">
+                                          <g>Subregión:</g> Junín<br>
+                                          <g>Descripción:</g> MACERACIÓN CARBÓNICA 100% CONCRETO<br>
+                                          <g>Vendemia:</g> 2022<br>
+                                          <g>Enólogo:</g> Lucas Niven
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card-body">
+                                <h5 class="card-title fs-4">Aqui estamos todos locos</h5>
+                                <h5 class="card-title2 fs-4">Garnacha Rosada</h5>
+                                <h5><span class="precio">$1500</span></h5>
+                                <a class="btn btn-warning button d-grid gap-2">Agregar al carrito</a>
+                              </div>
+                              </div>
+                          </div>
+                          <div class="col">
+                            <div class="card bg-blur">
+                              <div class="rounded">
+                                <img src="images/vinos/nivenwines/aquiestamostodoslocosgsmtinto.png" class="card-img-top rounded" alt="" data-bs-toggle="modal" data-bs-target="#Vino12">
+                                <div class="modal fade" id="Vino12" tabindex="-1" aria-hidden="true">
+                                  <div class="modal-dialog modal-md">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                      </div>
+                                      <div class="modal-body p-0">
+                                        <img src="images/vinos/nivenwines/aquiestamostodoslocosgsmtinto.png" alt="" class="modal-img">
+                                      </div>
+                                      <div class="modal-footer">
+                                        <h2 class="fs-2">Aqui estamos todos locos | GSM Tinto</h2>
+                                        <p class="fs-5">
+                                          <g>Subregión:</g> Junín<br>
+                                          <g>Descripción:</g> GARNACHA SYRAH MALBEC TINTO SIN MADERA<br>
+                                          <g>Vendemia:</g> 2022<br>
+                                          <g>Enólogo:</g> Lucas Niven
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card-body">
+                                <h5 class="card-title fs-4">Aqui estamos todos locos</h5>
+                                <h5 class="card-title2 fs-4">GSM Tinto</h5>
+                                <h5><span class="precio">$1500</span></h5>
+                                <a class="btn btn-warning button d-grid gap-2">Agregar al carrito</a>
+                              </div>
+                              </div>
+                          </div>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="vinyes-tab-pane" role="tabpanel" aria-labelledby="vinyes-tab" tabindex="0">2</div>
+                    <div class="tab-pane fade" id="anaia-tab-pane" role="tabpanel" aria-labelledby="anaia-tab" tabindex="0">3</div>
+                    <div class="tab-pane fade" id="zanchetta-tab-pane" role="tabpanel" aria-labelledby="zanchetta-tab" tabindex="0">4</div>
+                    <div class="tab-pane fade" id="satrapa-tab-pane" role="tabpanel" aria-labelledby="satrapa-tab" tabindex="0">5</div>
+                    <div class="tab-pane fade" id="martino-tab-pane" role="tabpanel" aria-labelledby="martino-tab" tabindex="0">6</div>
+                    <div class="tab-pane fade" id="closdechacras-tab-pane" role="tabpanel" aria-labelledby="closdechacras-tab" tabindex="0">7</div>
+                    <div class="tab-pane fade" id="bressia-tab-pane" role="tabpanel" aria-labelledby="bressia-tab" tabindex="0">8</div>
+                    <div class="tab-pane fade" id="altaruco-tab-pane" role="tabpanel" aria-labelledby="altaruco-tab" tabindex="0">9</div>
+                    <div class="tab-pane fade" id="zorzal-tab-pane" role="tabpanel" aria-labelledby="zorzal-tab" tabindex="0">10</div>
+                    <div class="tab-pane fade" id="achavalferrer-tab-pane" role="tabpanel" aria-labelledby="achavalferrer-tab" tabindex="0">11</div>
+                    <div class="tab-pane fade" id="teho-tab-pane" role="tabpanel" aria-labelledby="teho-tab" tabindex="0">12</div>
+                    <div class="tab-pane fade" id="losance-tab-pane" role="tabpanel" aria-labelledby="losance-tab" tabindex="0">13</div>
+                    <div class="tab-pane fade" id="flechasdelosandes-tab-pane" role="tabpanel" aria-labelledby="flechasdelosandes-tab" tabindex="0">14</div>
+                    <div class="tab-pane fade" id="lamaisonpenet-tab-pane" role="tabpanel" aria-labelledby="lamaisonpenet-tab" tabindex="0">15</div>
+                    <div class="tab-pane fade" id="solocontigo-tab-pane" role="tabpanel" aria-labelledby="solocontigo-tab" tabindex="0">16</div>
+                    <div class="tab-pane fade" id="edelmira-tab-pane" role="tabpanel" aria-labelledby="edelmira-tab" tabindex="0">17</div>
+                    <div class="tab-pane fade" id="gendelalma-tab-pane" role="tabpanel" aria-labelledby="gendelalma-tab" tabindex="0">18</div>
+                    <div class="tab-pane fade" id="bataraz-tab-pane" role="tabpanel" aria-labelledby="bataraz-tab" tabindex="0">19</div>
+                    <div class="tab-pane fade" id="birbiri-tab-pane" role="tabpanel" aria-labelledby="birbiri-tab" tabindex="0">20</div>
+                    <div class="tab-pane fade" id="abismla-tab-pane" role="tabpanel" aria-labelledby="abismla-tab" tabindex="0">21</div>
+                    <div class="tab-pane fade" id="garavaglia-tab-pane" role="tabpanel" aria-labelledby="garavaglia-tab" tabindex="0">22</div>
+                    <div class="tab-pane fade" id="dgentile-tab-pane" role="tabpanel" aria-labelledby="dgentile-tab" tabindex="0">23</div>
+                    <div class="tab-pane fade" id="aguaquecanta-tab-pane" role="tabpanel" aria-labelledby="aguaquecanta-tab" tabindex="0">24</div>
+                  </div>
+            </div>
+        </div>
+        <a href="https://wa.me/+5493489350707?text=" target="_blank" class="whatsapp-float whatsapp-icon"></a>
+        <button target="_blank" class="carrito-float carrito-icon" data-bs-toggle="modal" data-bs-target="#carritoModal"></button>
+        <!-- Modal -->
+        <div class="modal fade" id="carritoModal" tabindex="-1" aria-labelledby="carritoModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="carritoModalLabel">Carrito</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body carrito">
+                <table class="table table-hover table-striped table-gradient">
+                  <thead>
+                    <tr>
+                      <th scope="col" style="width: 300px;">Producto</th>
+                      <th scope="col" style="max-width: 80px;">Cantidad</th>
+                      <th scope="col">Precio</th>
+                    </tr>
+                  </thead>
+                  <tbody class="tbody">
+                  </tbody>
+                </table>
+              </div>
+              <div class="modal-footer d-flex justify-content-between">
+                <h2 class="itemCartTotal">Total: 0</h2>
+                <button class="btn btn-success comprar" target="_blank">COMPRAR</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <footer>
+      <div class="container-fluid">
+          <div class="row">
+            <!--  
+            <div class="col-sm-6 col-md-3 item">
+                  <h3>Services</h3>
+                  <ul>
+                      <li><a href="#">Web design</a></li>
+                      <li><a href="#">Development</a></li>
+                      <li><a href="#">Hosting</a></li>
+                  </ul>
+              </div>
+              <div class="col-sm-6 col-md-3 item">
+                  <h3>About</h3>
+                  <ul>
+                      <li><a href="#">Company</a></li>
+                      <li><a href="#">Team</a></li>
+                      <li><a href="#">Careers</a></li>
+                  </ul>
+              </div>
+              <div class="col-md-6 item text">
+                  <h3>Company Name</h3>
+                  <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+              </div>
+              -->
+              <div class="col social">
+                <a href="https://github.com/valentingarrido" target="_blank"><img src="images/footer/github.png" class="glow"></a>
+                <a href="https://instagram.com/valen_gx_" target="_blank"><img src="images/footer/instagram-6-512.png" class="glow"></a>
+                <a href="https://facebook.com/valentin.garrido714" target="_blank"><img src="images/footer/facebook-4-512.png" class="glow"></a>
+                <a href="https://discord.com/" target="_blank"><img src="images/footer/discord-512.png" class="glow"></a>
+                <a href="https://wa.me/+5493489429747?text=" target="_blank"><img src="images/footer/whatsapp-512.png" class="glow"></a>
+                <a href="https://linkedin.com/in/valentin-garrido-616961255" target="_blank"><img src="images/footer/linkedin-3-512.png" class="glow"></a>
+              </div>
+          </div>
+          <p class="copyright text-dark">Valentin Garrido © 2023.</p>
+          <p class="copyright text-dark p-0">valentingarrido714@gmail.com</p>
+      </div>
+  </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
