@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1, th, td {
     font-family: 'Bebas Neue', cursive;
     line-height: 0.8;
 }
@@ -302,14 +302,22 @@ footer .copyright {
     color: #853801;
 }
 
-.card-body {
+.card-body, .modal-header {
     background-color: #e0b56c;
 }
 
-.modal-header {
-    background-color: #e0b56c;
+.modal-body {
+    background-color: #ffd58b;
 }
 
 .card, .modal-header, .modal-footer {
     border-width: 0px;
+}
+
+.ItemCarrito, th {
+    border-style: hidden;
+}
+
+th, td, .title {
+    font-size: large;
 }
