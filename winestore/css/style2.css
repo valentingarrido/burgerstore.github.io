@@ -309,3 +309,7 @@ footer .copyright {
 .modal-header {
     background-color: #e0b56c;
 }
+
+.card, .modal-header, .modal-footer {
+    border-width: 0px;
+}
